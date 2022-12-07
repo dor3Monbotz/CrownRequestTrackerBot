@@ -1,9 +1,9 @@
+FROM python:3.8-slim-buster
+WORKDIR /app
 
-FROM debian:latest
-
-RUN apt update && apt upgrade -y
-RUN apt install git python3-pip -y
-RUN git clone https://github.com/dor3Monbotz/CrownRequestTrackerBot
-WORKDIR /CrownRequestTrackerBot
+COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
+
+COPY . .
+
 CMD python3 bot.py
