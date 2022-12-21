@@ -137,7 +137,7 @@ async def groupChannelIDHandler(bot:Update, msg:Message):
                     botSelfGroup = await bot.get_chat_member(int(groupID), 'me')
                 except (PeerIdInvalid, ValueError):   # If given group id is invalid
                     await msg.reply_text(
-                        "<b>😒Group ID is wrong.\n\n😊Join @projectcrown & @crownbotzsupport for getting more awesome 🤖bots like this.</b>",
+                        "<b>😒Group ID is wrong.\n\n😊Join [@projectcrown](https://t.me/projectcrown) & @crownbotzsupport for getting more awesome 🤖bots like this.</b>",
                         parse_mode = "html"
                     )
                 except UserNotParticipant:  # If bot is not in group
